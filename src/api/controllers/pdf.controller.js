@@ -8,9 +8,9 @@ const httpGeneratePdf = async (req, res) => {
     res.set({
       "Content-Type": "application/pdf",
       "Content-Length": pdf.length,
-      "Content-Disposition": `attachment;filename="${id}.pdf"`,
+      "Content-Disposition": `attachment;filename="${entityId}.pdf"`,
     })
-    res.send(pdf)
+    res.write(pdf)
   } catch (error) {
     console.error(error)
     res.status(500).json({ success: false, message: "Error generating Pdf", error: error })
