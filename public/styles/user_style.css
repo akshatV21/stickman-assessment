@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: rgb(255, 181, 194);
+  --l-pink: rgb(255, 223, 228);
+  --d-pink: rgb(255, 106, 131);
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink);
+}
+
+.main-block {
+  width: 360px;
+  padding: 30px 25px;
+  background-color: var(--l-pink);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+span {
+  width: 100%;
+}
+
+.main-block > span:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--d-pink);
+}
+
+input {
+  width: 100%;
+  font-size: 1.1rem;
+  background-color: var(--l-pink);
+  padding: 0.4em 0.4em;
+  border: none;
+  border-bottom: 2px solid var(--d-pink);
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-block > span:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6em 1em;
+  cursor: pointer;
+}
+
+.add-button {
+  background: none;
+  border: none;
+  color: var(--d-pink);
+}
+
+.register-button {
+  background-color: var(--d-pink);
+  border: 2px solid var(--d-pink);
+  color: var(--l-pink);
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--d-pink);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}

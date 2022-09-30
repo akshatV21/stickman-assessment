@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE | ADMIN</title>
+    <link rel="stylesheet" href="./styles/admin_style.css">
+    <script src="./scripts/admin_script.js" defer></script>
+</head>
+
+<body>
+    <section class="bg">
+        <div class="main-block">
+            <div class="entity-block">
+                <p>TOKEN</p>
+                <p>NAME</p>
+                <p>NUMBER</p>
+                <p>PDF BUTTON</p>
+            </div>
+            <% entities.forEach(entity=> { %>
+                <div class="entity-block">
+                    <p>
+                        <%= entity.token %>
+                    </p>
+                    <p>
+                        <%= entity.name %>
+                    </p>
+                    <p>
+                        <%= entity.number %>
+                    </p>
+                    <button data-id="<%= entity._id %> ">View PDF</button>
+                </div>
+                <% }) %>
+        </div>
+        <a href="/user">Go to /user</a>
+    </section>
+</body>
+
+</html>

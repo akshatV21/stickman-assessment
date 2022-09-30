@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: rgb(255, 181, 194);
+  --l-pink: rgb(255, 223, 228);
+  --d-pink: rgb(255, 106, 131);
+}
+
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--pink);
+}
+
+.main-block {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.entity-block:first-child {
+  background-color: var(--d-pink);
+}
+
+.entity-block:first-child p {
+  color: var(--l-pink);
+}
+
+.entity-block {
+  padding: 20px;
+  background-color: var(--l-pink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+p {
+  font-weight: 500;
+  color: var(--d-pink);
+}
+
+button {
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  background-color: var(--d-pink);
+  color: var(--l-pink);
+  border: 1px solid var(--d-pink);
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  color: var(--d-pink);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
