@@ -5,7 +5,11 @@ const httpGeneratePdf = async (req, res) => {
   try {
     const entityId = req.params.id
     const pdf = await generatePdf(entityId)
-    res.set({ "Content-Type": "application/pdf", "Content-Length": pdf.length })
+    res.set({
+      "Content-Type": "application/pdf",
+      "Content-Length": pdf.length,
+      "Content-Disposition": `attachment;filename="${id}.pdf"`,
+    })
     res.send(pdf)
   } catch (error) {
     console.error(error)

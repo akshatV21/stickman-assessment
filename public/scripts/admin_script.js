@@ -10,7 +10,7 @@ showPdfButtons.forEach(button => {
       },
     })
     const response = await request.arrayBuffer()
-    downloadPdf(response, id)
+    // downloadPdf(response, id)
   })
 })
 
