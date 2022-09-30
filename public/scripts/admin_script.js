@@ -17,5 +17,8 @@ showPdfButtons.forEach(button => {
 const downloadPdf = (pdfBuffer, id) => {
   const blob = new Blob([pdfBuffer], { type: "application/pdf" })
   const link = window.URL.createObjectURL(blob)
-  window.open(link)
+  const a = document.createElement("a")
+  a.href = link
+  a.download = `${id}.pdf`
+  a.click()
 }
